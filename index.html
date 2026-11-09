@@ -26,7 +26,6 @@
                 <li><a href="#teori">Pengenalan</a></li>
                 <li><a href="#komponen">14 Komponen</a></li>
                 <li><a href="#prosedur">Langkah Prosedur</a></li>
-                <li><a href="#kuis">Kuis Pemahaman</a></li>
                 <li><a href="#ringkasan">Kesimpulan</a></li>
             </ul>
             <div class="nav-actions">
@@ -62,9 +61,6 @@
                 <a href="#prosedur" class="btn btn-secondary">
                     <i class="fa-solid fa-list-check"></i> Prosedur Langkah-Langkah
                 </a>
-                <a href="#kuis" class="btn btn-secondary">
-                    <i class="fa-solid fa-circle-question"></i> Kuis Pemahaman
-                </a>
             </div>
             <div class="hero-meta-strip">
                 <div class="hero-meta-item">
@@ -72,9 +68,6 @@
                 </div>
                 <div class="hero-meta-item">
                     <i class="fa-solid fa-arrow-down-1-9"></i> 13 Langkah Prosedur Detail
-                </div>
-                <div class="hero-meta-item">
-                    <i class="fa-solid fa-award"></i> Kuis Uji Pemahaman
                 </div>
             </div>
         </div>
@@ -95,26 +88,26 @@
                 <h2>1. Pengenalan Pembongkaran & Perakitan PC</h2>
                 <div class="divider"></div>
                 <p class="section-desc">
-                    Komputer adalah kesatuan sistem terpadu. Memahami konsep pembongkaran dan perakitan adalah fondasi terpenting bagi seorang teknisi komputer andal.
+                    Komputer adalah kesatuan sistem terpadu. Dalam konteks Personal Computer (PC), istilah CPU dipahami sebagai satu kesatuan unit sistem pemroses utama tempat seluruh komponen perangkat keras saling terhubung dan bekerja sama.
                 </p>
             </div>
 
-            <!-- Analogi 3 Cards (Reference Style) -->
+            <!-- Konsep CPU dalam Konteks PC (3 Cards) -->
             <div class="analogi-grid">
                 <div class="analogi-card">
-                    <div class="card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
-                    <h3>Seperti Anatomi Tubuh</h3>
-                    <p>Komputer memiliki organ vital: Processor sebagai otak, RAM sebagai memori cepat, Power Supply sebagai jantung penyalur daya, dan Motherboard sebagai sistem saraf penghubung.</p>
+                    <div class="card-icon"><i class="fa-solid fa-desktop"></i></div>
+                    <h3>CPU sebagai Unit Sistem (PC)</h3>
+                    <p>Dalam konteks PC (<em>Personal Computer</em>), <strong>CPU</strong> merujuk pada <strong>Unit Sistem (<em>System Unit</em>)</strong> atau satu kesatuan kotak/casing komputer beserta seluruh komponen internal di dalamnya yang bekerja bersama menjalankan fungsi komputasi secara utuh.</p>
                 </div>
                 <div class="analogi-card emerald">
-                    <div class="card-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                    <h3>Presisi & Keterampilan Tangan</h3>
-                    <p>Melatih kepekaan tangan dalam memasang soket, mengencangkan baut secara tepat, dan menjaga sirkuit elektronik agar terhindar dari kerusakan fisik.</p>
+                    <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <h3>Perbedaan CPU vs. Processor</h3>
+                    <p>Secara teknis, <strong>Processor</strong> adalah keping chip mikro (otak komputasi) di motherboard. Namun dalam konteks PC desktop, <strong>CPU</strong> merujuk pada keseluruhan unit pemroses komputer tempat processor dan perangkat keras lainnya terpasang dan beroperasi.</p>
                 </div>
                 <div class="analogi-card amber">
-                    <div class="card-icon"><i class="fa-solid fa-stethoscope"></i></div>
-                    <h3>Troubleshooting Mandiri</h3>
-                    <p>Dengan mengetahui letak dan fungsi masing-masing komponen, kita dapat dengan mudah menemukan sumber masalah, membersihkan debu, atau meng-upgrade performa komputer.</p>
+                    <div class="card-icon"><i class="fa-solid fa-gears"></i></div>
+                    <h3>Fungsi Sentral dalam Sistem</h3>
+                    <p>Sebagai unit pemroses utama, CPU mengintegrasikan daya, penyimpanan, dan memori untuk mengolah data masukan dari perangkat input (keyboard/mouse) serta menyalurkan hasil kerja ke perangkat output (monitor/printer).</p>
                 </div>
             </div>
 
@@ -762,46 +755,6 @@
         </div>
     </section>
 
-    <!-- SECTION 4: KUIS PEMAHAMAN INTERAKTIF -->
-    <section class="section section-kuis" id="kuis">
-        <div class="container">
-            <div class="section-header">
-                <h2>4. Kuis Cek Pemahaman Siswa</h2>
-                <div class="divider"></div>
-                <p class="section-desc">
-                    Uji seberapa dalam pemahaman Anda mengenai fungsi komponen hardware dan prosedur perakitan PC melalui kuis interaktif berikut!
-                </p>
-            </div>
-
-            <div class="quiz-card glass-panel">
-                <div class="quiz-header-bar">
-                    <span class="quiz-progress-text" id="quiz-progress-text">Soal 1 dari 5</span>
-                    <span class="quiz-score-badge" id="quiz-score-badge">Skor: 0 / 100</span>
-                </div>
-                
-                <h3 class="quiz-question-text" id="quiz-question-text">
-                    Memuat pertanyaan kuis...
-                </h3>
-
-                <div class="quiz-options-list" id="quiz-options-list">
-                    <!-- Options injected by JS -->
-                </div>
-
-                <div class="quiz-feedback-box" id="quiz-feedback-box">
-                    <!-- Feedback message injected by JS -->
-                </div>
-
-                <div class="quiz-footer-actions">
-                    <button type="button" class="btn btn-primary" id="btn-next-quiz" disabled>
-                        Soal Berikutnya <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-                    <button type="button" class="btn btn-secondary" id="btn-restart-quiz" style="display: none;">
-                        <i class="fa-solid fa-rotate-left"></i> Ulangi Kuis
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- SECTION 5: KESIMPULAN & MOTIVASI BELAJAR (Reference Style) -->
     <section class="section section-summary" id="ringkasan">
@@ -834,7 +787,6 @@
                 <a href="#hero">Beranda</a>
                 <a href="#komponen">14 Komponen</a>
                 <a href="#prosedur">Prosedur</a>
-                <a href="#kuis">Kuis</a>
                 <a href="#ringkasan">Kesimpulan</a>
             </div>
         </div>
