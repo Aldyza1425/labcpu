@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petualangan Hardware: Praktik Pembongkaran & Perakitan PC - Modul Interaktif</title>
+    <!-- Google Fonts: Outfit for clean friendly look & Fira Code for technical bits -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome 6 for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- STICKY NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="nav-logo">
+                <i class="fa-solid fa-computer"></i>
+                <span>PC MasterLab</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#teori">Pengenalan</a></li>
+                <li><a href="#komponen">14 Komponen</a></li>
+                <li><a href="#prosedur">Langkah Prosedur</a></li>
+                <li><a href="#kuis">Kuis Pemahaman</a></li>
+                <li><a href="#ringkasan">Kesimpulan</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#prosedur" class="btn btn-primary btn-sm btn-glow">
+                    <i class="fa-solid fa-list-check"></i> Lihat Prosedur
+                </a>
+                <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+        <div class="glow-bg"></div>
+        <div class="glow-bg-radial"></div>
+        <div class="container hero-container">
+            <div class="badge">
+                <i class="fa-solid fa-graduation-cap"></i> Modul Praktikum Komputer Interaktif
+            </div>
+            <h1 class="hero-title">
+                Petualangan Hardware:<br>
+                <span class="highlight-text">Praktik Pembongkaran & Perakitan PC</span>
+            </h1>
+            <p class="hero-subtitle">
+                Pelajari anatomi perangkat keras komputer, kenali fungsi dan manfaat 14 komponen lengkap dengan foto aslinya, serta kuasai penjelasan langkah demi langkah prosedur perakitan dan pembongkaran PC secara runtut!
+            </p>
+            <div class="hero-buttons">
+                <a href="#komponen" class="btn btn-primary btn-glow">
+                    <i class="fa-solid fa-microchip"></i> Eksplorasi 14 Komponen
+                </a>
+                <a href="#prosedur" class="btn btn-secondary">
+                    <i class="fa-solid fa-list-check"></i> Prosedur Langkah-Langkah
+                </a>
+                <a href="#kuis" class="btn btn-secondary">
+                    <i class="fa-solid fa-circle-question"></i> Kuis Pemahaman
+                </a>
+            </div>
+            <div class="hero-meta-strip">
+                <div class="hero-meta-item">
+                    <i class="fa-solid fa-images"></i> 14 Komponen Berfoto Asli
+                </div>
+                <div class="hero-meta-item">
+                    <i class="fa-solid fa-arrow-down-1-9"></i> 13 Langkah Prosedur Detail
+                </div>
+                <div class="hero-meta-item">
+                    <i class="fa-solid fa-award"></i> Kuis Uji Pemahaman
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Decorative Hardware Symbols -->
+        <div class="hero-illustration">
+            <div class="floating-symbol cpu" title="Processor CPU"><i class="fa-solid fa-brain"></i></div>
+            <div class="floating-symbol ram" title="RAM Memory"><i class="fa-solid fa-memory"></i></div>
+            <div class="floating-symbol gpu" title="Graphics Card"><i class="fa-solid fa-display"></i></div>
+            <div class="floating-symbol tools" title="Tools & Hardware"><i class="fa-solid fa-screwdriver"></i></div>
+        </div>
+    </section>
+
+    <!-- SECTION 1: TEORI & PENGERTIAN -->
+    <section class="section section-teori" id="teori">
+        <div class="container">
+            <div class="section-header">
+                <h2>1. Pengenalan Pembongkaran & Perakitan PC</h2>
+                <div class="divider"></div>
+                <p class="section-desc">
+                    Komputer adalah kesatuan sistem terpadu. Memahami konsep pembongkaran dan perakitan adalah fondasi terpenting bagi seorang teknisi komputer andal.
+                </p>
+            </div>
+
+            <!-- Analogi 3 Cards (Reference Style) -->
+            <div class="analogi-grid">
+                <div class="analogi-card">
+                    <div class="card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3>Seperti Anatomi Tubuh</h3>
+                    <p>Komputer memiliki organ vital: Processor sebagai otak, RAM sebagai memori cepat, Power Supply sebagai jantung penyalur daya, dan Motherboard sebagai sistem saraf penghubung.</p>
+                </div>
+                <div class="analogi-card emerald">
+                    <div class="card-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <h3>Presisi & Keterampilan Tangan</h3>
+                    <p>Melatih kepekaan tangan dalam memasang soket, mengencangkan baut secara tepat, dan menjaga sirkuit elektronik agar terhindar dari kerusakan fisik.</p>
+                </div>
+                <div class="analogi-card amber">
+                    <div class="card-icon"><i class="fa-solid fa-stethoscope"></i></div>
+                    <h3>Troubleshooting Mandiri</h3>
+                    <p>Dengan mengetahui letak dan fungsi masing-masing komponen, kita dapat dengan mudah menemukan sumber masalah, membersihkan debu, atau meng-upgrade performa komputer.</p>
+                </div>
+            </div>
+
+            <!-- Comparison Container: Pembongkaran vs Perakitan -->
+            <div class="comparison-container glass-panel">
+                <div class="comparison-header">
+                    <i class="fa-solid fa-code-compare"></i>
+                    <h3>Pembongkaran PC vs. Perakitan PC</h3>
+                </div>
+                <p class="comparison-desc">
+                    Keduanya merupakan proses yang saling berkebalikan namun membutuhkan ketelitian, kehati-hatian, dan pemahaman tata letak yang sama:
+                </p>
+                <div class="comparison-grid">
+                    <div class="comparison-card">
+                        <h4><i class="fa-solid fa-wrench" style="color: var(--accent-amber);"></i> Pembongkaran PC</h4>
+                        <ol class="step-ol">
+                            <li><strong>Definisi:</strong> Kegiatan melepas atau memisahkan komponen-komponen komputer dari casing secara bertahap dan teratur.</li>
+                            <li><strong>Tujuan Utama:</strong> Membersihkan komputer dari debu, memperbaiki kerusakan, mengganti komponen yang usang, atau memeriksa perangkat keras (hardware).</li>
+                            <li><strong>Prinsip Alur:</strong> Bergerak dari luar ke dalam: mematikan daya, melepas panel casing, kabel daya, kartu ekspansi (VGA/LAN), media penyimpanan, heatsink, processor, hingga motherboard dan power supply.</li>
+                        </ol>
+                    </div>
+                    <div class="comparison-card">
+                        <h4><i class="fa-solid fa-microchip" style="color: var(--color-primary);"></i> Perakitan PC</h4>
+                        <ul class="benefit-ul">
+                            <li><i class="fa-solid fa-circle-check"></i> <strong>Definisi:</strong> Proses memasang dan menghubungkan berbagai komponen komputer menjadi satu kesatuan utuh sehingga komputer dapat berfungsi dengan baik.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> <strong>Sinergi Komponen:</strong> Menyatukan motherboard, processor, RAM, pendingin heatsink, media penyimpanan (HDD/SSD/DVD), kartu grafis, dan power supply.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> <strong>Prinsip Alur:</strong> Memasang komponen inti di atas motherboard di luar casing terlebih dahulu, memasukkan ke casing, lalu menghubungkan kabel front panel, kabel SATA data, dan konektor daya listrik.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goals / Objectives Banner -->
+            <div class="goals-banner">
+                <h3 class="goals-banner-title">
+                    <i class="fa-solid fa-bullseye"></i> 5 Tujuan Praktik Pembongkaran & Perakitan PC
+                </h3>
+                <div class="goals-grid">
+                    <div class="goal-item">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Memahami bagian-bagian perangkat keras komputer secara fisik.</span>
+                    </div>
+                    <div class="goal-item">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Mengetahui fungsi spesifik setiap komponen PC.</span>
+                    </div>
+                    <div class="goal-item">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Melatih keterampilan mekanik melepas dan memasang komponen.</span>
+                    </div>
+                    <div class="goal-item">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Mengetahui cara merawat dan memperbaiki komputer secara berkala.</span>
+                    </div>
+                    <div class="goal-item">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Memahami hubungan sinergis antara satu komponen dengan komponen lainnya.</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 2: 14 KOMPONEN PC (DENGAN GAMBAR NYATA) -->
+    <section class="section section-komponen" id="komponen">
+        <div class="container">
+            <div class="section-header">
+                <h2>2. Pengertian, Fungsi, dan Manfaat 14 Komponen PC</h2>
+                <div class="divider"></div>
+                <p class="section-desc">
+                    Berikut adalah 14 komponen perangkat keras komputer beserta foto aslinya. Klik tombol <strong>"Lihat Fungsi & Manfaat"</strong> pada setiap kartu untuk mempelajari rincian mendalam.
+                </p>
+            </div>
+
+            <!-- Toolbar: Filter Tabs & Search Bar -->
+            <div class="components-toolbar">
+                <div class="filter-tabs">
+                    <button type="button" class="filter-btn active" data-category="all">Semua Komponen (14)</button>
+                    <button type="button" class="filter-btn" data-category="core">Komponen Utama</button>
+                    <button type="button" class="filter-btn" data-category="cooling">Pendingin & Casing</button>
+                    <button type="button" class="filter-btn" data-category="storage">Penyimpanan & Kabel</button>
+                    <button type="button" class="filter-btn" data-category="expansion">Ekspansi & Daya</button>
+                </div>
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="search-hw" placeholder="Cari komponen (contoh: RAM, VGA, Processor)...">
+                </div>
+            </div>
+
+            <!-- Hardware Cards Grid (Rendered Dynamically by JS with Real Images) -->
+            <div class="hardware-grid" id="hardware-grid">
+                <!-- Javascript will inject 14 hardware cards here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: PENJELASAN LANGKAH-LANGKAH PROSEDUR PC -->
+    <section class="section section-prosedur" id="prosedur">
+        <div class="container">
+            <div class="section-header">
+                <h2>3. Penjelasan Langkah-Langkah Prosedur PC</h2>
+                <div class="divider"></div>
+                <p class="section-desc">
+                    Pelajari langkah-langkah kerja teknis pembongkaran dan perakitan komputer secara runtut, terstruktur, dan terstandarisasi berdasarkan dokumen prosedur resmi.
+                </p>
+            </div>
+
+            <!-- Procedure Mode Selector Bar -->
+            <div class="procedure-selector-bar">
+                <div class="procedure-tabs">
+                    <button type="button" class="proc-tab-btn active" data-pane="pane-assembly">
+                        <i class="fa-solid fa-wrench"></i> Prosedur Perakitan PC (13 Langkah)
+                    </button>
+                    <button type="button" class="proc-tab-btn" data-pane="pane-disassembly">
+                        <i class="fa-solid fa-screwdriver"></i> Prosedur Pembongkaran PC (13 Langkah)
+                    </button>
+                </div>
+            </div>
+
+            <!-- PANE 1: PROSEDUR PERAKITAN PC (13 LANGKAH) -->
+            <div class="procedure-pane active" id="pane-assembly">
+                <div class="procedure-intro-banner">
+                    <div class="proc-intro-text">
+                        <h3><i class="fa-solid fa-screwdriver-wrench text-blue"></i> Prosedur Perakitan Komputer (Assembly)</h3>
+                        <p>Mengikuti urutan 13 langkah baku pemasangan komponen agar sistem terpasang presisi, rapi, dan berfungsi optimal.</p>
+                    </div>
+                    <span class="badge"><i class="fa-solid fa-circle-check"></i> 13 Langkah Runtut</span>
+                </div>
+
+                <div class="procedure-steps-list">
+                    <!-- Step 1 -->
+                    <div class="procedure-step-card">
+                        <div class="proc-step-num">01</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/Motherboard.jpg" alt="Menyiapkan Motherboard" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Menyiapkan Motherboard</h4>
+                                <span class="proc-step-badge">Persiapan Awal</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Siapkan motherboard sebagai tempat pemasangan processor, RAM, dan perangkat lainnya. Pastikan motherboard diletakkan di tempat yang aman, datar, bersih, dan beralaskan bantalan antistatis agar sirkuit terhindar dari kontak konduktif atau goresan meja kerja.
+                            </p>
+                            <div class="proc-tip-box">
+                                <i class="fa-solid fa-circle-info"></i>
+                                <span><strong>Catatan:</strong> Memasang CPU dan pendingin di luar casing memberikan ruang kerja yang jauh lebih leluasa dibanding langsung di dalam casing.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="procedure-step-card">
+                        <div class="proc-step-num">02</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/Processor.jpg" alt="Memasang Processor" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Memasang Processor</h4>
+                                <span class="proc-step-badge">Pemasangan Inti</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Buka tuas pengunci socket yang tersedia di motherboard. Pasangkan processor dengan mencocokkan tanda segitiga emas pada sudut processor dengan tanda pada socket. Letakkan processor secara pas tanpa memaksakan posisi, lalu tutup penutup socket dan kunci kembali tuas penguncinya.
+                            </p>
+                            <div class="proc-tip-box">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                <span><strong>Peringatan:</strong> Jangan memasang processor secara terbalik atau memaksakannya masuk karena dapat membengkokkan pin socket yang sensitif.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="procedure-step-card">
+                        <div class="proc-step-num">03</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/Thermal Paste.jpg" alt="Mengoleskan Thermal Paste" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Mengoleskan Thermal Paste</h4>
+                                <span class="proc-step-badge">Termal & Pendingin</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Setelah processor terpasang kuat, berikan thermal paste pada bagian atas pelindung logam processor secukupnya dan secara merata. Thermal paste berfungsi mengisi pori-pori mikroskopis udara untuk membantu menghantarkan panas dari processor menuju heatsink.
+                            </p>
+                            <div class="proc-tip-box">
+                                <i class="fa-solid fa-lightbulb"></i>
+                                <span><strong>Tips Praktis:</strong> Cukup oleskan seukuran sebutir kacang polong atau jagung di bagian tengah permukaan processor.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="procedure-step-card">
+                        <div class="proc-step-num">04</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/Heatsink.jpg" alt="Memasang Heatsink" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Memasang Heatsink & Fan</h4>
+                                <span class="proc-step-badge">Termal & Pendingin</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Pasangkan heatsink di atas processor. Perhatikan posisi kaki-kaki atau pin penguncinya, tekan secara menyilang hingga terpasang kokoh. Setelah itu, sambungkan kabel daya kipas heatsink ke konektor bertuliskan <strong>CPU_FAN</strong> pada motherboard.
+                            </p>
+                            <div class="proc-tip-box">
+                                <i class="fa-solid fa-circle-info"></i>
+                                <span><strong>Catatan:</strong> Pastikan kabel kipas tidak melintang atau mengenai bilah kipas yang akan berputar.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="procedure-step-card">
+                        <div class="proc-step-num">05</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/RAM.jpg" alt="Memasang RAM" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Memasang RAM</h4>
+                                <span class="proc-step-badge">Memori Utama</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Buka pengait klip pada kedua sisi slot RAM motherboard. Sesuaikan coakan (notch) pada bagian bawah modul RAM dengan pembatas slot agar orientasinya tepat. Tekan kedua ujung RAM secara perlahan dan seimbang sampai pengunci samping menutup otomatis dan berbunyi "klik".
+                            </p>
+                            <div class="proc-tip-box">
+                                <i class="fa-solid fa-lightbulb"></i>
+                                <span><strong>Tips:</strong> Jika menggunakan sistem dual-channel dengan 2 keping RAM, gunakan slot dengan warna yang sama (misalnya slot 2 dan slot 4).</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div class="procedure-step-card">
+                        <div class="proc-step-num">06</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/Case.jpg" alt="Memasang Motherboard ke Casing" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Memasang Motherboard ke Casing</h4>
+                                <span class="proc-step-badge">Integrasi Casing</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Pasang pelat I/O Shield pada bagian belakang casing, lalu masukkan motherboard ke dalam casing secara hati-hati. Sesuaikan posisi lubang baut motherboard dengan dudukan spacer (standoff) casing, kemudian kencangkan menggunakan baut pengunci secara merata.
+                            </p>
+                            <div class="proc-tip-box">
+                                <i class="fa-solid fa-circle-info"></i>
+                                <span><strong>Catatan:</strong> Pastikan setiap standoff terpasang sesuai posisi lubang baut motherboard agar tidak terjadi korsleting listrik di balik papan sirkuit.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 7 -->
+                    <div class="procedure-step-card">
+                        <div class="proc-step-num">07</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/Kabel Front.jpg" alt="Memasang Kabel Front Panel dan CMOS" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Memasang Kabel Front Panel dan CMOS</h4>
+                                <span class="proc-step-badge">Konektor Kontrol</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Hubungkan kumpulan kabel kecil front panel dari casing (Power SW, Reset SW, HDD LED, Power LED) ke pin header motherboard. Perhatikan tulisan pada konektor dan petunjuk diagram motherboard agar pemasangan tidak tertukar. Pastikan pula baterai CMOS tipe CR2032 terpasang rapat pada dudukannya.
+                            </p>
+                            <div class="proc-tip-box">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                <span><strong>Perhatian:</strong> Perhatikan polaritas kabel LED (kabel berwarna umumnya positif (+), kabel putih/hitam negatif (-)). Tombol Switch tidak memiliki polaritas.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 8 -->
+                    <div class="procedure-step-card">
+                        <div class="proc-step-num">08</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/DVD ROM.jpg" alt="Memasang DVD-ROM" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Memasang DVD-ROM</h4>
+                                <span class="proc-step-badge">Drive Optik</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Buka penutup kompartemen 5.25 inci di bagian depan casing. Masukkan unit DVD-ROM dari bagian luar depan casing, dorong perlahan ke dalam, sejajarkan posisinya dengan lubang baut pada rangka casing, kemudian kencangkan menggunakan baut pada kedua sisi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 9 -->
+                    <div class="procedure-step-card">
+                        <div class="proc-step-num">09</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/Harddisk.jpg" alt="Memasang Harddisk" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Memasang Harddisk (HDD / SSD)</h4>
+                                <span class="proc-step-badge">Media Penyimpanan</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Masukkan harddisk ke dalam rak kompartemen penyimpanan (drive bay 3.5" atau 2.5") yang tersedia di dalam casing. Sejajarkan lubang baut sampingnya dan kencangkan menggunakan baut pengunci agar harddisk kokoh dan tidak bergetar saat piringan disk berputar.
+                            </p>
+                            <div class="proc-tip-box">
+                                <i class="fa-solid fa-circle-info"></i>
+                                <span><strong>Catatan Teknis:</strong> Harddisk dipasang pada rak rangka casing, bukan diletakkan langsung di atas motherboard.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 10 -->
+                    <div class="procedure-step-card">
+                        <div class="proc-step-num">10</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/LAN Card.jpg" alt="Memasang LAN Card" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Memasang LAN Card</h4>
+                                <span class="proc-step-badge">Kartu Jaringan</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Lepaskan pelat penutup slot ekspansi di bagian belakang casing. Masukkan LAN Card ke slot ekspansi motherboard yang sesuai (slot PCI atau PCIe x1). Perhatikan posisi coakan konektornya, tekan lurus hingga masuk sempurna, kemudian kencangkan bracket logamnya dengan baut pada casing.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 11 -->
+                    <div class="procedure-step-card">
+                        <div class="proc-step-num">11</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/VGA Card.jpg" alt="Memasang VGA Card" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Memasang VGA Card (Graphics Card)</h4>
+                                <span class="proc-step-badge">Kartu Grafis</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Buka kait pengunci pada slot <strong>PCI Express (PCIe) x16</strong> di motherboard. Pasangkan VGA Card secara tegak lurus, tekan merata hingga kait slot mengunci otomatis, lalu kencangkan baut pengunci bracket VGA pada rangka belakang casing agar stabil menahan beban kartu grafis.
+                            </p>
+                            <div class="proc-tip-box">
+                                <i class="fa-solid fa-circle-info"></i>
+                                <span><strong>Catatan Teknis:</strong> VGA Card umumnya dipasang pada slot PCI Express x16 (slot ekspansi terpanjang), bukan pada slot antarmuka lainnya.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 12 -->
+                    <div class="procedure-step-card">
+                        <div class="proc-step-num">12</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/Kabel SATA.jpg" alt="Memasang Kabel SATA" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Memasang Kabel SATA Data</h4>
+                                <span class="proc-step-badge">Jalur Data</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Hubungkan satu ujung kabel SATA data ke port SATA pada motherboard, dan ujung lainnya ke port SATA pada Harddisk serta DVD-ROM. Kabel pipih ini bertugas mentransfer aliran data bolak-balik antara media penyimpanan dan sistem komputer.
+                            </p>
+                            <div class="proc-tip-box">
+                                <i class="fa-solid fa-lightbulb"></i>
+                                <span><strong>Tips:</strong> Kabel SATA data memiliki ujung konektor berprofil huruf "L", pastikan posisinya pas dan tidak dipaksakan.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 13 -->
+                    <div class="procedure-step-card">
+                        <div class="proc-step-num">13</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/Power Supply.jpg" alt="Memasang Power Supply" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Memasang Power Supply & Kabel Daya</h4>
+                                <span class="proc-step-badge">Catu Daya Akhir</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Masukkan unit Power Supply ke kompartemen dudukan di bagian dalam casing. Kencangkan keempat baut penahannya di bagian luar belakang casing. Setelah itu, distribusikan kabel-kabel dayanya: kabel 24-pin ATX ke motherboard, kabel 4/8-pin ke CPU power, kabel SATA power ke harddisk dan DVD-ROM, serta kabel PCIe power ke kartu grafis (jika diperlukan).
+                            </p>
+                            <div class="proc-tip-box">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span><strong>Catatan Penting:</strong> Kabel SATA data terhubung dari motherboard ke drive, sedangkan kabel SATA power berasal dari Power Supply untuk menyuplai daya listrik.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PANE 2: PROSEDUR PEMBONGKARAN PC (13 LANGKAH) -->
+            <div class="procedure-pane" id="pane-disassembly">
+                <div class="procedure-intro-banner" style="background: linear-gradient(135deg, #fffbeb 0%, #f8fafc 100%); border-color: rgba(217, 119, 6, 0.2);">
+                    <div class="proc-intro-text">
+                        <h3><i class="fa-solid fa-screwdriver text-amber"></i> Prosedur Pembongkaran Komputer (Disassembly)</h3>
+                        <p>Panduan teratur melepaskan komponen PC secara bertahap (kebalikan dari alur perakitan) untuk perawatan atau perbaikan.</p>
+                    </div>
+                    <span class="badge badge-amber"><i class="fa-solid fa-shield-halved"></i> 13 Langkah Runtut</span>
+                </div>
+
+                <div class="procedure-steps-list">
+                    <!-- Step 1 -->
+                    <div class="procedure-step-card disassembly">
+                        <div class="proc-step-num">01</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/Power Supply.jpg" alt="Mematikan Komputer & Memutus Listrik" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Mematikan Komputer & Memutus Listrik</h4>
+                                <span class="proc-step-badge">Keselamatan Utama</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Matikan komputer secara benar melalui sistem operasi (Shut Down). Setelah sistem padam total, matikan sakelar belakang PSU dan cabut kabel listrik utama dari stopkontak PLN. Tekan tombol Power casing sejenak untuk membuang sisa arus listrik statis yang masih tersimpan di motherboard.
+                            </p>
+                            <div class="proc-tip-box">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                <span><strong>Wajib:</strong> Pastikan komputer benar-benar tidak terhubung dengan sumber listrik apa pun sebelum tangan masuk ke dalam casing.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="procedure-step-card disassembly">
+                        <div class="proc-step-num">02</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/Case.jpg" alt="Membuka Casing Komputer" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Membuka Casing Komputer</h4>
+                                <span class="proc-step-badge">Akses Internal</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Lepaskan baut pengunci pada panel samping casing menggunakan obeng plus (+). Geser penutup panel ke arah belakang, lalu angkat penutup casing dan simpan di tempat yang aman agar tidak tergores.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="procedure-step-card disassembly">
+                        <div class="proc-step-num">03</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/Power Supply.jpg" alt="Melepas Kabel Power Supply" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Melepas Kabel Power Supply</h4>
+                                <span class="proc-step-badge">Pemutusan Daya</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Lepaskan seluruh kabel yang menghubungkan power supply dengan komponen: cabut konektor 24-pin ATX motherboard dengan menekan klip penguncinya, cabut konektor daya 4/8-pin CPU, konektor daya SATA pada Harddisk dan DVD-ROM, serta kabel daya VGA.
+                            </p>
+                            <div class="proc-tip-box">
+                                <i class="fa-solid fa-lightbulb"></i>
+                                <span><strong>Tips:</strong> Pegang kepala konektor plastik saat mencabut, jangan menarik kabel kawatnya agar tidak putus atau kendor.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="procedure-step-card disassembly">
+                        <div class="proc-step-num">04</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/VGA Card.jpg" alt="Melepas VGA Card" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Melepas VGA Card (Graphics Card)</h4>
+                                <span class="proc-step-badge">Kartu Ekspansi</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Buka baut pengunci bracket VGA Card pada rangka belakang casing. Tekan ke bawah kait pengunci di ujung slot PCI Express x16 pada motherboard, kemudian angkat kartu VGA secara perlahan dan tegak lurus keluar dari slotnya.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="procedure-step-card disassembly">
+                        <div class="proc-step-num">05</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/LAN Card.jpg" alt="Melepas LAN Card" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Melepas LAN Card</h4>
+                                <span class="proc-step-badge">Kartu Jaringan</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Lepaskan baut pengunci bracket LAN Card pada casing. Pegang bagian tepi atas kartu jaringan, lalu tarik keluar dari slot ekspansi motherboard secara hati-hati.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div class="procedure-step-card disassembly">
+                        <div class="proc-step-num">06</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/Kabel SATA.jpg" alt="Melepas Kabel SATA Data" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Melepas Kabel SATA Data</h4>
+                                <span class="proc-step-badge">Kabel Data</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Lepaskan kabel SATA data yang terhubung ke harddisk, DVD-ROM, dan motherboard. Tekan klip pengunci logam kecil pada kepala konektor kabel SATA sebelum menariknya agar port tidak rusak.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 7 -->
+                    <div class="procedure-step-card disassembly">
+                        <div class="proc-step-num">07</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/Harddisk.jpg" alt="Melepas Harddisk (HDD)" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Melepas Harddisk (HDD)</h4>
+                                <span class="proc-step-badge">Penyimpanan</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Buka seluruh baut pengunci harddisk pada kedua sisi rak penyimpanan (drive bay) casing menggunakan obeng plus (+). Pegang harddisk dengan hati-hati, lalu keluarkan perlahan dari tempat dudukannya.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 8 -->
+                    <div class="procedure-step-card disassembly">
+                        <div class="proc-step-num">08</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/DVD ROM.jpg" alt="Melepas DVD-ROM" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Melepas DVD-ROM</h4>
+                                <span class="proc-step-badge">Drive Optik</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Lepaskan baut pengunci drive DVD-ROM di kedua sisi rangka dalam casing. Dorong unit DVD-ROM ke arah luar melalui bagian depan casing, lalu keluarkan dengan aman.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 9 -->
+                    <div class="procedure-step-card disassembly">
+                        <div class="proc-step-num">09</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/RAM.jpg" alt="Melepas RAM" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Melepas RAM</h4>
+                                <span class="proc-step-badge">Modul Memori</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Tekan ke bawah pengait klip pada kedua ujung sisi slot RAM secara bersamaan sampai modul RAM terangkat ke atas. Ambil RAM dengan memegang bagian kedua tepi sampingnya, hindari menyentuh deretan pin kuningan emasnya.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 10 -->
+                    <div class="procedure-step-card disassembly">
+                        <div class="proc-step-num">10</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/Heatsink.jpg" alt="Melepas Heatsink & Fan" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Melepas Heatsink & Fan</h4>
+                                <span class="proc-step-badge">Unit Pendingin</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Cabut konektor kabel kipas dari port CPU_FAN motherboard. Buka kunci pengait atau putar pin pengunci heatsink, lalu angkat unit heatsink perlahan dari atas processor. Jika pasta menempel rekat, putar heatsink ke kiri-kanan secara lembut sebelum mengangkatnya.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 11 -->
+                    <div class="procedure-step-card disassembly">
+                        <div class="proc-step-num">11</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/Processor.jpg" alt="Melepas Processor (CPU)" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Melepas Processor (CPU)</h4>
+                                <span class="proc-step-badge">Unit Pemroses</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Buka tuas pengunci socket processor ke posisi tegak, buka penutup socket, lalu angkat processor dengan memegang kedua tepinya secara sangat hati-hati. Simpan processor pada wadah khusus antistatis agar pin atau permukaan kontak emasnya terlindungi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 12 -->
+                    <div class="procedure-step-card disassembly">
+                        <div class="proc-step-num">12</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/Motherboard.jpg" alt="Melepas Motherboard dari Casing" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Melepas Motherboard dari Casing</h4>
+                                <span class="proc-step-badge">Papan Sirkuit</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Cabut kabel front panel (Power, Reset, LED) dan kabel audio/USB casing dari motherboard. Buka seluruh baut pengunci motherboard dari dudukan spacer casing, kemudian keluarkan motherboard secara hati-hati dari dalam casing.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 13 -->
+                    <div class="procedure-step-card disassembly">
+                        <div class="proc-step-num">13</div>
+                        <div class="proc-step-img-box">
+                            <img src="image/Power Supply.jpg" alt="Melepas Power Supply (PSU)" class="proc-step-img" loading="lazy">
+                        </div>
+                        <div class="proc-step-content">
+                            <div class="proc-step-header">
+                                <h4>Melepas Power Supply (PSU)</h4>
+                                <span class="proc-step-badge">Unit Catu Daya</span>
+                            </div>
+                            <p class="proc-step-body">
+                                Tahan kotak power supply dengan satu tangan agar tidak merosot, lalu buka keempat baut pengunci power supply di bagian belakang casing. Keluarkan unit power supply dari casing secara perlahan.
+                            </p>
+                            <div class="proc-tip-box">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                <span><strong>Peringatan Keselamatan:</strong> Jangan pernah membuka bagian dalam kotak power supply karena kapasitor tegangan tinggi dapat menyimpan muatan listrik berbahaya!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 4: KUIS PEMAHAMAN INTERAKTIF -->
+    <section class="section section-kuis" id="kuis">
+        <div class="container">
+            <div class="section-header">
+                <h2>4. Kuis Cek Pemahaman Siswa</h2>
+                <div class="divider"></div>
+                <p class="section-desc">
+                    Uji seberapa dalam pemahaman Anda mengenai fungsi komponen hardware dan prosedur perakitan PC melalui kuis interaktif berikut!
+                </p>
+            </div>
+
+            <div class="quiz-card glass-panel">
+                <div class="quiz-header-bar">
+                    <span class="quiz-progress-text" id="quiz-progress-text">Soal 1 dari 5</span>
+                    <span class="quiz-score-badge" id="quiz-score-badge">Skor: 0 / 100</span>
+                </div>
+                
+                <h3 class="quiz-question-text" id="quiz-question-text">
+                    Memuat pertanyaan kuis...
+                </h3>
+
+                <div class="quiz-options-list" id="quiz-options-list">
+                    <!-- Options injected by JS -->
+                </div>
+
+                <div class="quiz-feedback-box" id="quiz-feedback-box">
+                    <!-- Feedback message injected by JS -->
+                </div>
+
+                <div class="quiz-footer-actions">
+                    <button type="button" class="btn btn-primary" id="btn-next-quiz" disabled>
+                        Soal Berikutnya <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    <button type="button" class="btn btn-secondary" id="btn-restart-quiz" style="display: none;">
+                        <i class="fa-solid fa-rotate-left"></i> Ulangi Kuis
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: KESIMPULAN & MOTIVASI BELAJAR (Reference Style) -->
+    <section class="section section-summary" id="ringkasan">
+        <div class="container">
+            <div class="summary-vertical-content">
+                <!-- Kesimpulan Block -->
+                <div class="summary-block conclusion-block">
+                    <h3><i class="fa-solid fa-lightbulb text-amber"></i> Kesimpulan Pembelajaran</h3>
+                    <p>
+                        Praktik pembongkaran dan perakitan PC merupakan sarana terbaik untuk mengenal perangkat keras komputer beserta fungsi masing-masing komponennya secara nyata. Kita belajar bagaimana cara melepas, memasang, dan menghubungkan komponen seperti motherboard, processor, RAM, harddisk, power supply, dan kartu ekspansi secara bertahap dan teratur.
+                    </p>
+                </div>
+                
+                <!-- Motivasi Block -->
+                <div class="summary-block motivation-block">
+                    <h3><i class="fa-solid fa-rocket text-green"></i> Motivasi & Semangat Praktik</h3>
+                    <p>
+                        Melalui praktik langsung, Anda tidak hanya menguasai teori, tetapi juga membangun keterampilan motorik dan logika pemecahan masalah (troubleshooting). Jangan pernah takut merakit komputer! Ketelitian, kehati-hatian terhadap aturan keselamatan, dan pemahaman fungsi komponen adalah kunci menjadi seorang teknisi dan praktisi komputer yang hebat.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Modul Ajar Praktik Pembongkaran & Perakitan PC. Dibuat untuk media pembelajaran interaktif.</p>
+            <div class="footer-links">
+                <a href="#hero">Beranda</a>
+                <a href="#komponen">14 Komponen</a>
+                <a href="#prosedur">Prosedur</a>
+                <a href="#kuis">Kuis</a>
+                <a href="#ringkasan">Kesimpulan</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button type="button" class="back-to-top" id="back-to-top" aria-label="Kembali ke atas">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- COMPONENT DETAIL MODAL DIALOG -->
+    <div class="modal-overlay" id="hardware-modal">
+        <div class="modal-card">
+            <div class="modal-header-top">
+                <h3 id="modal-title"><i class="fa-solid fa-microchip"></i> Detail Komponen</h3>
+                <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Tutup">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-img-wrapper">
+                    <img id="modal-img" src="" alt="Foto Komponen" class="modal-img">
+                </div>
+                <div class="modal-section-group">
+                    <span class="badge" id="modal-category">Komponen Utama</span>
+                    <h5><i class="fa-solid fa-book-open"></i> Pengertian</h5>
+                    <p id="modal-pengertian"></p>
+                </div>
+                <div class="modal-section-group">
+                    <h5><i class="fa-solid fa-gears"></i> Fungsi Komponen</h5>
+                    <ul id="modal-fungsi"></ul>
+                </div>
+                <div class="modal-section-group">
+                    <h5><i class="fa-solid fa-thumbs-up"></i> Manfaat dalam Sistem</h5>
+                    <p id="modal-manfaat"></p>
+                </div>
+                <div class="modal-section-group">
+                    <h5><i class="fa-solid fa-lightbulb"></i> Tips Pemasangan & Perawatan</h5>
+                    <p id="modal-tips" style="background: #fffbeb; padding: 12px 16px; border-radius: 10px; border: 1px solid #fde68a; color: #92400e;"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
